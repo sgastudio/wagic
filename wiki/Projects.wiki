@@ -1,0 +1,24 @@
+#summary Listing of currently undertaken or planned projects
+#labels Phase-Design
+
+= Introduction =
+
+As we spend time working towards release date while under feature lock, I think it might be a good idea to set aside this area for planning and organization of future projects. This could be a good way to keep on top of issues like, "Who do I talk to about...?" or "Is anyone working on..." without sending out multitudes of email. The emails and issue tracker are great for discussion, but as a quick overview of what's what this could be useful. 
+
+This is definitely voluntary, and there are no real guidelines here... but I think anything that can't be summed up in a single sentence should probably be explained in detail elsewhere. Think of this as the project organization "cheat sheet". 
+
+If this turns out to be more trouble than it's worth, we'll of course abandon it :)
+
+= Project listing =
+
+----
+
+==Jeck==
+*Current Projects*
+ * *Wagic manual* (Current primary focus)
+ * Debugging cache, with Erwan (see issue 109, issue 112)
+*Proposed Projects*
+ * *Game "Modes"* (per email discussion, focus for future release).
+ * Unlock screen / achievement badges (per email discussion)
+ * Texture splitting (see issue 14)
+ * Complex themes (Possible extrapolation of r1109)
