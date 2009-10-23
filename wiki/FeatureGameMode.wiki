@@ -24,6 +24,7 @@ Lines starting with a minus would blacklist the cards, lines without would white
 
 == Modify base rules ==
 I'd also like to add support for modes to have permanent "world enchantment" style effects. Codewise, this could be as simple as adding an invisble, invulnerable card to the battlefield. With a little tweaking, this could also lead to a Planechase mode (which would need to be at least partially hardcode).
+Agreed: These could be loaded with the same "auto=" lines that we have in cards, but loaded from a "rules" or "mods" specific directory. --Erwan
 
 == Different rules per player ==
 I'd definitely want to add support for separate rules per player, so there might be game modes where one side has to use only walls, but also has a permanent "Rolling Stones" in play, or something similar. This would also include changing life counts, etc.
@@ -70,3 +71,5 @@ reward=400 credits
 reward=Baneslayer Angel
 [/scene]
 }}}
+
+I had something more "ambitious" in mind: Campaigns would be scripted through an XML files, that describes not only the deck of opponents, but also some maps you would have to travel on. This requires months of work so we should start with your idea, keeping the "maps" idea in mind -- Erwan
