@@ -15,13 +15,10 @@ If this turns out to be more trouble than it's worth, we'll of course abandon it
 
 ==Jeck==
 *Current Projects*
- * *Wagic manual* (Current primary focus)
- * Debugging cache, with Erwan (see issue 109, issue 112)
-*Proposed Projects*
- * *Game "Modes"* (per email discussion, focus for future release).
- * Unlock screen / achievement badges (per email discussion)
- * Texture splitting (see issue 14)
- * Complex themes (Possible extrapolation of r1109)
+ * Complex themes 
+ * Restricted sets & format restriction
+ * Better mod support
+ * Wagic manual update to latest rev.
 
 ----
 
