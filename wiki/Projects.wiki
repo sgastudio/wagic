@@ -73,3 +73,5 @@ _(Argh. I was afraid that the list would get that long. I'd like to state again 
  * Startup speed up : bytecompilation of collections.
  * Network : unification library PC/PSP
  * Effects : add graphical eyecandy to the inplay phase
+ * Packaging : create a .deb for linux (ultimately, aim for integration in mainstream Debian/Ubuntu repositories), a .dmg for mac, create the windows binary under linux, all of this automatically
+ * Remove fmod dependancy
