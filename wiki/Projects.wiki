@@ -65,9 +65,11 @@ If this turns out to be more trouble than it's worth, we'll of course abandon it
 
 _(Argh. I was afraid that the list would get that long. I'd like to state again that it's unlikely that I'll be able to implement more than 10% of those. Usually I wouldn't even make these ideas public with so little to show yet. On the other hand I wanted to tell you what I'm interested in, so there it is.)_
 
+----
+
 ==Jean==
 *Current Projects*
-* Internationalization : allow for accented characters, chinese, japanese.
-* Startup speed up : bytecompilation of collections.
-* Network : unification library PC/PSP
-* Effects : add graphical eyecandy to the inplay phase
+ * Internationalization : allow for accented characters, chinese, japanese.
+ * Startup speed up : bytecompilation of collections.
+ * Network : unification library PC/PSP
+ * Effects : add graphical eyecandy to the inplay phase
