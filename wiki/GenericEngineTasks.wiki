@@ -12,6 +12,36 @@
   * Card Subtypes (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
   * Player Values (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
 
+= Current State =
+(As of the SVN in 2011/05/11)
+== Zones ==
+Zones are hardcoded as objects of the Player's "game" attribute. It should be relatively easy to create a generic "zone" object that has a "name", which would then make it easy to get rid of most hardcoded zone-related code. Some zones (main example is "inplay") still have strong hardcoded stuff (for example, when a card moves from inplay to inplay, we avoid sending "moved to play" events, etc...).
+
+== Phases ==
+rules/.txt allow to define a "customphasering", which allows to reorganize the existing phases "as you wish". It doesn't allow to create entirely new phases yet.
+
+Limitations of what a player can/can't do during a phase is hardcoded
+
+== Energies/Money/Mana ==
+ * Currently mana colors are deeply hardcoded
+ * WotC have a patent on "energy producing cards"
+
+== Card values (ie name, type, subtype, power, toughness, text, cost, etc) ==
+ * Rendering could be described in XML (what do we want to render on the card, where on the card do we want to render it)
+ * Defining attributes themselves generically sounds like a hard task
+
+== Card Types/subtypes ==
+Types are hardcoded
+
+Subtypes are already entirely generic, except for a few exceptions that need to be handled a bit better (changelings, and lots of land subtypes as well...)
+
+== Player Values (Life, counters)==
+All of this is currently hardcoded. One easy step would be to create a map associating a string to an int ("life" => 20").
+
 = In Progress =
 
 If anyone is currently working on any of these they should say so somewhere on this page so that we don't get any duplication of effort from multiple people working on the same. It would also be a good idea to list it on the [Projects] page.
+
+= Reference =
+Firemox was an attempt at a generic game engine. They have an xml file describing lots of game components, we can take inspiration from that.
+http://sourceforge.net/projects/firemox/files/
