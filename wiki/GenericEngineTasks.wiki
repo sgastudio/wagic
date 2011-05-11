@@ -1,0 +1,17 @@
+#summary List of tasks needed to convert Wagic into a generic card game engine
+#labels Phase-Requirements
+
+= Tasks =
+
+  *Zones
+  *Phases
+    *Steps?
+  *Energies (mana)
+  *Card Values (ie name, type, subtype, power, toughness, text, cost, etc)
+  *Card Types
+  *Card Subtypes (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
+  *Player Values (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
+
+= In Progress =
+
+If anyone is currently working on any of these they should say so somewhere on this page so that we don't get any duplication of effort from multiple people working on the same. It would also be a good idea to list it on the [Projects] page.
