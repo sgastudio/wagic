@@ -7,7 +7,7 @@
   * [GenericEngineTasks#Phases Phases]
     * Steps?
   * [GenericEngineTasks#Energies/Moneys/Mana Energies] (mana)
-  * [GenericEngineTasks#Card_values_(ie_name,_type,_subtype,_power,_toughness,_text,_cost,_etc) Card Values] (ie name, type, subtype, power, toughness, text, cost, etc)
+  * [GenericEngineTasks#Card_values Card Values] (ie name, type, subtype, power, toughness, text, cost, etc)
   * [GenericEngineTasks#Card_Types/subtypes Card Types]
   * [GenericEngineTasks#Card_Types/subtypes Card Subtypes] (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
   * [GenericEngineTasks#Player_Values_(Life,_counters) Player Values] (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
@@ -27,9 +27,10 @@ Limitations of what a player can/can't do during a phase is hardcoded
  * Currently mana colors are deeply hardcoded
  * WotC have a patent on "energy producing cards"
 
-== Card values (ie name, type, subtype, power, toughness, text, cost, etc) ==
+== Card values ==
  * Rendering could be described in XML (what do we want to render on the card, where on the card do we want to render it)
  * Defining attributes themselves generically sounds like a hard task
+ * May Want to take a look at how GCCG does it, although their documentation is horrible. [gccg.sourceforge.net]
 
 == Card Types/subtypes ==
 Types are hardcoded
