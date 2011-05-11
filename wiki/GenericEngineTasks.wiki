@@ -3,14 +3,14 @@
 
 = Tasks =
 
-  *Zones
-  *Phases
-    *Steps?
-  *Energies (mana)
-  *Card Values (ie name, type, subtype, power, toughness, text, cost, etc)
-  *Card Types
-  *Card Subtypes (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
-  *Player Values (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
+  * Zones
+  * Phases
+    * Steps?
+  * Energies (mana)
+  * Card Values (ie name, type, subtype, power, toughness, text, cost, etc)
+  * Card Types
+  * Card Subtypes (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
+  * Player Values (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
 
 = In Progress =
 
