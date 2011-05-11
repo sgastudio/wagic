@@ -11,6 +11,7 @@
   * Card Types
   * Card Subtypes (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
   * Player Values (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
+  * Combat (What can attack, what can be attacked, when attacks can occur, how they are resolved, etc.)
 
 = Current State =
 (As of the SVN in 2011/05/11)
@@ -37,6 +38,9 @@ Subtypes are already entirely generic, except for a few exceptions that need to 
 
 == Player Values (Life, counters)==
 All of this is currently hardcoded. One easy step would be to create a map associating a string to an int ("life" => 20").
+
+== Combat ==
+This is completely hardcoded.
 
 = In Progress =
 
