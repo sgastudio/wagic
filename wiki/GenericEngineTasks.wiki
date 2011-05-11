@@ -3,15 +3,15 @@
 
 = Tasks =
 
-  * Zones
-  * Phases
+  * [GenericEngineTasks#Zones Zones]
+  * [GenericEngineTasks#Phases Phases]
     * Steps?
-  * Energies (mana)
-  * Card Values (ie name, type, subtype, power, toughness, text, cost, etc)
-  * Card Types
-  * Card Subtypes (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
-  * Player Values (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
-  * Combat (What can attack, what can be attacked, when attacks can occur, how they are resolved, etc.)
+  * [GenericEngineTasks#Energies/Moneys/Mana Energies] (mana)
+  * [GenericEngineTasks#Card_values_(ie_name,_type,_subtype,_power,_toughness,_text,_cost,_etc) Card Values] (ie name, type, subtype, power, toughness, text, cost, etc)
+  * [GenericEngineTasks#Card_Types/subtypes Card Types]
+  * [GenericEngineTasks#Card_Types/subtypes Card Subtypes] (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
+  * [GenericEngineTasks#Player_Values_(Life,_counters) Player Values] (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
+  * [GenericEngineTasks#Combat Combat] (What can attack, what can be attacked, when attacks can occur, how they are resolved, etc.)
 
 = Current State =
 (As of the SVN in 2011/05/11)
