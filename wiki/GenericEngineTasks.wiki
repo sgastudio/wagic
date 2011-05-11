@@ -6,7 +6,7 @@
   * [GenericEngineTasks#Zones Zones]
   * [GenericEngineTasks#Phases Phases]
     * Steps?
-  * [GenericEngineTasks#Energies/Moneys/Mana Energies] (mana)
+  * [GenericEngineTasks#Energies/Money/Mana Energies] (mana)
   * [GenericEngineTasks#Card_values Card Values] (ie name, type, subtype, power, toughness, text, cost, etc)
   * [GenericEngineTasks#Card_Types/subtypes Card Types]
   * [GenericEngineTasks#Card_Types/subtypes Card Subtypes] (I know these two overlap somewhat with values, but in most games there is a very specific list of Types, and then often each type has a specific list of allowed subtypes, ie lands can be Forest, Island, Plains, Mountain, or Swamp)
