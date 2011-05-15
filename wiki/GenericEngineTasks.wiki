@@ -35,7 +35,7 @@ Limitations of what a player can/can't do during a phase is hardcoded
 == Card Types/subtypes ==
 Types are hardcoded
 
-Subtypes are already entirely generic, except for a few exceptions that need to be handled a bit better (changelings, and lots of land subtypes as well...)
+Subtypes are already entirely generic, except for a few exceptions that need to be handled a bit better (lots of land subtypes for example...)
 
 == Player Values (Life, counters)==
 All of this is currently hardcoded. One easy step would be to create a map associating a string to an int ("life" => 20").
