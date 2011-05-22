@@ -13,35 +13,71 @@
   * [GenericEngineTasks#Player_Values_(Life,_counters) Player Values] (Life being the first obvious example, although not all games have it. Also poison counters from mtg.)
   * [GenericEngineTasks#Combat Combat] (What can attack, what can be attacked, when attacks can occur, how they are resolved, etc.)
 
-= Current State =
-(As of the SVN in 2011/05/11)
+
 == Zones ==
-Zones are hardcoded as objects of the Player's "game" attribute. It should be relatively easy to create a generic "zone" object that has a "name", which would then make it easy to get rid of most hardcoded zone-related code. Some zones (main example is "inplay") still have strong hardcoded stuff (for example, when a card moves from inplay to inplay, we avoid sending "moved to play" events, etc...).
+=== Current State ===
+(As of the SVN in 2011/05/11)
+
+Zones are hardcoded as objects of the Player's "game" attribute.  Some zones (main example is "inplay") still have strong hardcoded stuff (for example, when a card moves from inplay to inplay, we avoid sending "moved to play" events, etc...).
+
+=== Todo ===
+ * It should be relatively easy to create a generic "zone" object that has a "name", which would then make it easy to get rid of most hardcoded zone-related code.
+ * Someone contacted me with a game concept where "geography" matters. The "battlefield" is a 20x20 grid, and where cards are on this grid is important for the game. Should those be 400 different zones? This sounds over the top... WotC's "eye of the judgement" or "Triple Triad" also come to mind, although those have only a 3x3 grid, which sounds much more reasonable...
 
 == Phases ==
+=== Current State ===
+(As of the SVN in 2011/05/11)
+
 rules/.txt allow to define a "customphasering", which allows to reorganize the existing phases "as you wish". It doesn't allow to create entirely new phases yet.
 
 Limitations of what a player can/can't do during a phase is hardcoded
 
+=== Todo ===
+
 == Energies/Money/Mana ==
+=== Current State ===
+(As of the SVN in 2011/05/11)
+
  * Currently mana colors are deeply hardcoded
  * WotC have a patent on "energy producing cards"
 
+=== Todo ===
+
 == Card values ==
+=== Current State ===
+(As of the SVN in 2011/05/11)
+
+=== Todo ===
  * Rendering could be described in XML (what do we want to render on the card, where on the card do we want to render it)
  * Defining attributes themselves generically sounds like a hard task
  * May Want to take a look at how GCCG does it, although their documentation is horrible. [gccg.sourceforge.net]
 
 == Card Types/subtypes ==
+=== Current State ===
+(As of the SVN in 2011/05/11)
+
 Types are hardcoded
 
 Subtypes are already entirely generic, except for a few exceptions that need to be handled a bit better (lots of land subtypes for example...)
 
+=== Todo ===
+
 == Player Values (Life, counters)==
-All of this is currently hardcoded. One easy step would be to create a map associating a string to an int ("life" => 20").
+=== Current State ===
+(As of the SVN in 2011/05/11)
+
+All of this is currently hardcoded. 
+
+=== Todo ===
+One easy step would be to create a map associating a string to an int ("life" => 20").
 
 == Combat ==
+=== Current State ===
+(As of the SVN in 2011/05/11)
+
 This is completely hardcoded.
+
+=== Todo ===
 
 = In Progress =
 
