@@ -27,11 +27,11 @@ Zones are hardcoded as objects of the Player's "game" attribute.  Some zones (ma
 ==== Detailed "Generic Zones" system ====
  * List of zones for each player must be declared somewhere in the rules (mod rules?). A name is probably enough. Zone rules themselves (how they interact with each other) are declared somewhere else in the modrules. Graphical behavior of the zones should be declared somewhere else (to allow themes). The goal is to link a "zone" (defined by its id) to a graphical renderer
  * Zone rules (how a card can move to or from this zone, etc...)  need to be defined (replace "putIntoPlay" hardcoded rule, etc...
- ** We already know that "moveTo" is not always good enough, because MTG requires for example to make a difference between something played "normally" and something moved on the battlefield by a "putintoplay" action... require an additional flag maybe ?
+  * We already know that "moveTo" is not always good enough, because MTG requires for example to make a difference between something played "normally" and something moved on the battlefield by a "putintoplay" action... require an additional flag maybe ?
  * Once zones are described outside of the code, we need to become more flexible with card databases. "auto" won't mean anything once "inplay" is not a special zone anymore, "draw" is not precise enough anymore, same for "shuffle", etc.... In order for the card code to not become entirely unreadable, a system of "macros" should be designed (top of each primitives files sounds the best? Maybe an include?). example: _#define auto= autoinplay=_
- ** Careful of not introducing infinite loops or recursion errors ? 
+  * Careful of not introducing infinite loops or recursion errors ? 
  * Zones are attached to renderers/controllers. Those are hardcoded in C++ but need to be designed so that they can render "any" zone (== ordered group of card)
- ** Which controller renders what zone is defined in a theme xml. The following is just an example, not sure of the details yet
+  * Which controller renders what zone is defined in a theme xml. The following is just an example, not sure of the details yet
 {{{
 <zone>
   <id>inplay1</id>
@@ -94,14 +94,14 @@ Zones are hardcoded as objects of the Player's "game" attribute.  Some zones (ma
   </renderer>
 </zone>
 }}}
- ** Ideas:
- *** RegularZoneRenderer (for inplay). Parameters: hide (0/1) see if cards need to be shown or hidden (could allow to render opponents hand easily), x, y (upper left corner), width, height (size of the component), columns, rows (number of colum/rows to render ?)
- *** PriorityListRenderer: series of subrenderers, that render sub-parts of the zone, based on targetChooser definitions (see example above). Allows to have several renderers for inplay. The first renderer that matches a card gets to render that card.
- *** AvatarContainer: renders Avatar, plus a list of "card backs", that once activated, activate the rendering of other zones (library, graveyard, exile, whatever...)
- *** Remove/Add events already exist in GuiCombat, we will need to reuse similar things
- ***It is ok to render outside of the limts of a zone (x/y/width/height) for the sake of animation. use actX,actY VS x,y from the Pos objects. Once an object is "marked" as belonging to graveyard, graveyard is in charge of rendering it, including the animation that brings it from inplay to graveyard. actX can be outside of the current zone, x shouldn't (assertion failure)
- *** Will need a global "CardView" pool for continuity of the rendering
- *** Render "Overlord" has a list of all renderers in order. ReceiveEvent becomes ReceiveEventMinus (loop all renderers) then ReceiveEventPlus (loop all renderers) <-- note, same for priorityList described above?
+  * Ideas:
+   * RegularZoneRenderer (for inplay). Parameters: hide (0/1) see if cards need to be shown or hidden (could allow to render opponents hand easily), x, y (upper left corner), width, height (size of the component), columns, rows (number of colum/rows to render ?)
+   * PriorityListRenderer: series of subrenderers, that render sub-parts of the zone, based on targetChooser definitions (see example above). Allows to have several renderers for inplay. The first renderer that matches a card gets to render that card.
+   * AvatarContainer: renders Avatar, plus a list of "card backs", that once activated, activate the rendering of other zones (library, graveyard, exile, whatever...)
+   * Remove/Add events already exist in GuiCombat, we will need to reuse similar things
+   *It is ok to render outside of the limts of a zone (x/y/width/height) for the sake of animation. use actX,actY VS x,y from the Pos objects. Once an object is "marked" as belonging to graveyard, graveyard is in charge of rendering it, including the animation that brings it from inplay to graveyard. actX can be outside of the current zone, x shouldn't (assertion failure)
+   * Will need a global "CardView" pool for continuity of the rendering
+   * Render "Overlord" has a list of all renderers in order. ReceiveEvent becomes ReceiveEventMinus (loop all renderers) then ReceiveEventPlus (loop all renderers) <-- note, same for priorityList described above?
 
 == Phases ==
 === Current State ===
@@ -166,15 +166,15 @@ If anyone is currently working on any of these they should say so somewhere on t
 == Wtactics support ==
  * How to choose north/South zone when a card comes into play? Define a new "putintoplay" rule ?
  * How to handle piles of face down cards for resources? How to allow creation of new piles?
- ** Resource piles reconfiguration
+  * Resource piles reconfiguration
  * Mulligan rules are slightly different from the ones we have <-- make an outside rule?
  * How to represent North/South? <-- See "zones" WIP above. I suggest to represent north and south with left/right, makes more sense visually to me than above/below
  * New card values (faction, etc...) -> How to graphically represent new printed values? (xml to define card components in mods rules + xml to define the rendering of those)
- ** WTactics: color is associated to faction
+  * WTactics: color is associated to faction
  * Cost: only gold
  * Threshold?
  * Equipemt carry/type limitation rule (attacker must declare equipment at attack phase).
- ** card goes to graveyard, still equipped? Rules are unclear
+  * card goes to graveyard, still equipped? Rules are unclear
  * Events == instants, can be done with langugage file change
  * Magic == rituals, can be done with language file change
  * MTG Layer rule is simpified, "can VS can't" rule. How to move the layer rule outside of the code?
