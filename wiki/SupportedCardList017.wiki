@@ -8,7 +8,7 @@ Supported Card list for 0.17, includes Borderline cards
 There are a total of 8686 cards supported in this release.
 
 
-[B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [Q] [R] [S] [T] [U] [V] [W] [X] [Y] [Z]
+[SupportedCardList017#B B] [SupportedCardList017#C C] [SupportedCardList017#D D] [SupportedCardList017#E E] [SupportedCardList017#F F] [SupportedCardList017#G G] [SupportedCardList017#H H] [SupportedCardList017#I I] [SupportedCardList017#J J] [SupportedCardList017#K K] [SupportedCardList017#L L] [SupportedCardList017#M M] [SupportedCardList017#N N] [SupportedCardList017#O O] [SupportedCardList017#P P] [SupportedCardList017#Q Q] [SupportedCardList017#R R] [SupportedCardList017#S S] [SupportedCardList017#T T] [SupportedCardList017#U U] [SupportedCardList017#V V] [SupportedCardList017#W W] [SupportedCardList017#X X] [SupportedCardList017#Y Y] [SupportedCardList017#Z Z]
 
 ==A (485 cards)==
   # AErathi Berserker
