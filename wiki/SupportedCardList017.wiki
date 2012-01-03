@@ -8,7 +8,7 @@ Supported Card list for 0.17, includes Borderline cards
 There are a total of 8686 cards supported in this release.
 
 
-[SupportedCardList017#B B] [SupportedCardList017#C C] [SupportedCardList017#D D] [SupportedCardList017#E E] [SupportedCardList017#F F] [SupportedCardList017#G G] [SupportedCardList017#H H] [SupportedCardList017#I I] [SupportedCardList017#J J] [SupportedCardList017#K K] [SupportedCardList017#L L] [SupportedCardList017#M M] [SupportedCardList017#N N] [SupportedCardList017#O O] [SupportedCardList017#P P] [SupportedCardList017#Q Q] [SupportedCardList017#R R] [SupportedCardList017#S S] [SupportedCardList017#T T] [SupportedCardList017#U U] [SupportedCardList017#V V] [SupportedCardList017#W W] [SupportedCardList017#X X] [SupportedCardList017#Y Y] [SupportedCardList017#Z Z]
+[SupportedCardList017#B_(511_cards)_Back_to_Top B] [SupportedCardList017#C_(579_cards)_Back_to_Top C] [SupportedCardList017#D_(503_cards)_Back_to_Top D] [SupportedCardList017#E_(293_cards)_Back_to_Top E] [SupportedCardList017#F_(387_cards)_Back_to_Top F] [SupportedCardList017#G_(471_cards)_Back_to_Top G] [SupportedCardList017#H_(295_cards)_Back_to_Top H] [SupportedCardList017#I_(187_cards)_Back_to_Top I] [SupportedCardList017#J_(101_cards)_Back_to_Top J] [SupportedCardList017#K_(267_cards)_Back_to_Top K] [SupportedCardList017#L_(270_cards)_Back_to_Top L] [SupportedCardList017#M_(516_cards)_Back_to_Top M] [SupportedCardList017#N_(187_cards)_Back_to_Top N] [SupportedCardList017#O_(161_cards)_Back_to_Top O] [SupportedCardList017#P_(422_cards)_Back_to_Top P] [SupportedCardList017#Q_(35_cards)_Back_to_Top Q] [SupportedCardList017#R_(457_cards)_Back_to_Top R] [SupportedCardList017#S_(1230_cards)_Back_to_Top S] [SupportedCardList017#T_(516_cards)_Back_to_Top T] [SupportedCardList017#U_(99_cards)_Back_to_Top U] [SupportedCardList017#V_(265_cards)_Back_to_Top V] [SupportedCardList017#W_(355_cards)_Back_to_Top W] [SupportedCardList017#X_(6_cards)_Back_to_Top X] [SupportedCardList017#Y_(32_cards)_Back_to_Top Y] [SupportedCardList017#Z_(56_cards)_Back_to_Top Z]
 
 ==A (485 cards)==
   # AErathi Berserker
@@ -8625,7 +8625,7 @@ There are a total of 8686 cards supported in this release.
   # Wurmweaver Coil
   # Wydwen, the Biting Gale
   # Wyluli Wolf
-==X  _Back to [SupportedCardList017#Details Top]_==
+==X (6 cards)  _Back to [SupportedCardList017#Details Top]_==
   # Xanthic Statue
   # Xantid Swarm
   # Xathrid Demon
