@@ -35,7 +35,7 @@ There are a total of 8686 cards supported in this release.
 [Z]
 
 ==A (485 cards)==
-<ol id="index_A">
+<ol>
 	<li>AErathi Berserker</li>
 	<li>AEther Adept</li>
 	<li>AEther Charge</li>
@@ -525,7 +525,7 @@ There are a total of 8686 cards supported in this release.
 
 ==B (511 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_B">
+<ol>
 	<li>Back to Basics</li>
 	<li>Back to Nature</li>
 	<li>Backfire</li>
@@ -1041,7 +1041,7 @@ There are a total of 8686 cards supported in this release.
 
 ==C (579 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_C">
+<ol>
 	<li>Cabal Archon</li>
 	<li>Cabal Coffers</li>
 	<li>Cabal Patriarch</li>
@@ -1625,7 +1625,7 @@ There are a total of 8686 cards supported in this release.
 
 ==D (503 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_D">
+<ol>
 	<li>D'Avenant Archer</li>
 	<li>D'Avenant Healer</li>
 	<li>Daggerback Basilisk</li>
@@ -2133,7 +2133,7 @@ There are a total of 8686 cards supported in this release.
 
 ==E (293 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_E">
+<ol>
 	<li>Eager Cadet</li>
 	<li>Early Frost</li>
 	<li>Early Harvest</li>
@@ -2431,7 +2431,7 @@ There are a total of 8686 cards supported in this release.
 
 ==F (387 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_F">
+<ol>
 	<li>Fable of Wolf and Owl</li>
 	<li>Fabricate</li>
 	<li>Face of Fear</li>
@@ -2823,7 +2823,7 @@ There are a total of 8686 cards supported in this release.
 
 ==G (471 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_G">
+<ol>
 	<li>Gaea's Anthem</li>
 	<li>Gaea's Avenger</li>
 	<li>Gaea's Bounty</li>
@@ -3299,7 +3299,7 @@ There are a total of 8686 cards supported in this release.
 
 ==H (295 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_H">
+<ol>
 	<li>Haazda Exonerator</li>
 	<li>Hada Freeblade</li>
 	<li>Hada Spy Patrol</li>
@@ -3599,7 +3599,7 @@ There are a total of 8686 cards supported in this release.
 
 ==I (187 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_I">
+<ol>
 	<li>Ib Halfheart, Goblin Tactician</li>
 	<li>Icatian Crier</li>
 	<li>Icatian Javelineers</li>
@@ -3791,7 +3791,7 @@ There are a total of 8686 cards supported in this release.
 
 ==J (101 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_J">
+<ol>
 	<li>Jabari's Banner</li>
 	<li>Jace's Erasure</li>
 	<li>Jace's Ingenuity</li>
@@ -3897,7 +3897,7 @@ There are a total of 8686 cards supported in this release.
 
 ==K (267 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_K">
+<ol>
 	<li>Kaalia of the Vast</li>
 	<li>Kabira Crossroads</li>
 	<li>Kabira Vindicator</li>
@@ -4169,7 +4169,7 @@ There are a total of 8686 cards supported in this release.
 
 ==L (270 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_L">
+<ol>
 	<li>Lab Rats</li>
 	<li>Laboratory Maniac</li>
 	<li>Labyrinth Minotaur</li>
@@ -4444,7 +4444,7 @@ There are a total of 8686 cards supported in this release.
 
 ==M (516 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_M">
+<ol>
 	<li>Ma Chao, Western Warrior</li>
 	<li>Macabre Waltz</li>
 	<li>Macetail Hystrodon</li>
@@ -4965,7 +4965,7 @@ There are a total of 8686 cards supported in this release.
 
 ==N (187 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_N">
+<ol>
 	<li>Nacatl Outlander</li>
 	<li>Nacatl Savage</li>
 	<li>Nagao, Bound by Honor</li>
@@ -5157,7 +5157,7 @@ There are a total of 8686 cards supported in this release.
 
 ==O (161 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_O">
+<ol>
 	<li>O-Naginata</li>
 	<li>Oakenform</li>
 	<li>Oakgnarl Warrior</li>
@@ -5323,7 +5323,7 @@ There are a total of 8686 cards supported in this release.
 
 ==P (422 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_P">
+<ol>
 	<li>Pacifism</li>
 	<li>Pack Hunt</li>
 	<li>Pact of Negation</li>
@@ -5750,7 +5750,7 @@ There are a total of 8686 cards supported in this release.
 
 ==Q (35 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_Q">
+<ol>
 	<li>Qasali Pridemage</li>
 	<li>Quag Sickness</li>
 	<li>Quag Vampires</li>
@@ -5790,7 +5790,7 @@ There are a total of 8686 cards supported in this release.
 
 ==R (457 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_R">
+<ol>
 	<li>Rabble-Rouser</li>
 	<li>Rabid Elephant</li>
 	<li>Rabid Rats</li>
@@ -6252,7 +6252,7 @@ There are a total of 8686 cards supported in this release.
 
 ==S (1230 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_S">
+<ol>
 	<li>Saber Ants</li>
 	<li>Saberclaw Golem</li>
 	<li>Sabertooth Alley Cat</li>
@@ -7487,7 +7487,7 @@ There are a total of 8686 cards supported in this release.
 
 ==T (516 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_T">
+<ol>
 	<li>Tahngarth's Rage</li>
 	<li>Tahngarth, Talruum Hero</li>
 	<li>Taiga</li>
@@ -8008,7 +8008,7 @@ There are a total of 8686 cards supported in this release.
 
 ==U (99 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_U">
+<ol>
 	<li>Uktabi Drake</li>
 	<li>Uktabi Efreet</li>
 	<li>Uktabi Faerie</li>
@@ -8112,7 +8112,7 @@ There are a total of 8686 cards supported in this release.
 
 ==V (265 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_V">
+<ol>
 	<li>Vaevictis Asmadi</li>
 	<li>Vagrant Plowbeasts</li>
 	<li>Valakut Fireboar</li>
@@ -8382,7 +8382,7 @@ There are a total of 8686 cards supported in this release.
 
 ==W (355 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_W">
+<ol>
 	<li>Waiting in the Weeds</li>
 	<li>Wake Thrasher</li>
 	<li>Wake of Destruction</li>
@@ -8742,7 +8742,7 @@ There are a total of 8686 cards supported in this release.
 
 ==X==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_X">
+<ol>
 	<li>Xanthic Statue</li>
 	<li>Xantid Swarm</li>
 	<li>Xathrid Demon</li>
@@ -8753,7 +8753,7 @@ There are a total of 8686 cards supported in this release.
 
 ==Y (32 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_Y">
+<ol>
 	<li>Yamabushi's Flame</li>
 	<li>Yamabushi's Storm</li>
 	<li>Yavimaya Ancients</li>
@@ -8790,7 +8790,7 @@ There are a total of 8686 cards supported in this release.
 
 ==Z (56 cards)==
 <span style="font-size:small; float: right;">Back to [SupportedCardList017#Details Top]</span>
-<ol id="index_Z">
+<ol>
 	<li>Zap</li>
 	<li>Zealot il-Vec</li>
 	<li>Zealots en-Dal</li>
