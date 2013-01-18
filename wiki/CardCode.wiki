@@ -912,8 +912,20 @@ For activated abilities (i.e. [[#auto|auto]] rules with a [[#auto cost|cost]] se
   *  [[#ueot|ueot]] - "until end of turn", forces the effect to end when the turn ends
 
 ===phase restrictions===
+<font color="#008000">
+*Description:* Non-activated restrictions allows the effect to be active only at certain times. The following variable tags are available:
 
-*Description:* phase restrictions allow the effect to be activated only at certain times. The following keywords are available:
+  *  controllerturn - _(only active in the card controller's turn)_
+  *  opponentturn - _(only active in the card opponent's turn)_
+
+*Examples:*
+  *  auto=this(variable{controllerturn}) 1/5 - _(During your turn, the 1/5 effect is always active)_
+  *  auto=this(variable{opponentturn}) 5/1 - _(During opponents turn, the 5/1 effect is always active)_
+  
+*Limitations:*
+  *  These restrictions were designed for continuous effects only.
+</font>  
+*Description:* Activated phase restrictions allow the effect to be activated only at certain times. The following keywords are available:
 
   *  myturnonly - _(only usable in the card controller's turn)_
   *  assorcery - _(only usable when a sorcery could be played, i.e. in the card controller's first and second main phase)_
@@ -924,7 +936,7 @@ For activated abilities (i.e. [[#auto|auto]] rules with a [[#auto cost|cost]] se
   *  {3}:untap myupkeeponly - _(In your upkeep phase, you may pay 3 mana to untap this card.)_
 
 *Limitations:*
-  *  These restrictions were designed for activated abilities so they probably won't work for continuous effects. For a creature that gets +2/+2 in its controller's turn, _2/2 myturnonly_ will probably not work. However, _@each my draw:2/2 ueot_ might. (??)
+  *  These restrictions were designed for activated abilities so they probably won't work for continuous effects.
 
   *  You can't (yet) restrict activation to other combinations of phases, like "only during combat" or "only before attachers have been declared".
 
