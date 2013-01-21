@@ -644,8 +644,30 @@ The conditions in this section govern whether or not an effect will be executed.
 
 An effect that uses the term "kicker" in its auto= rule will only be executed if this card's [[#kicker (cost)|kicker cost]] was paid. Usually "kicker" is the first word in the auto= rule. See [[#kicker (cost)|kicker (cost)]] for an example.
 
-*Limitations:* Kicker currently only allows to specify _additional_ effects. If a card's kicker effect _replaces_ its usual effect, then the card cannot be coded. To do this, you would need to tell the "regular" effect to only execute if the kicker cost was not paid, and we curently don't have a "nokicker" condition. (Note to wololo: I may have a way of solving this, and enabling cards with more than one kicker as well, but this will require more thought.)
+kicker payment can be checked through restrictions using the following restriction check
+auto=if paid(kicker) then *ability*
+auto=ifnot paid(kicker) then *ability*
+this allows you a very flexible way of coding effects, even those that replace a cards original form.
 
+MultiKicker is also supported, simply add the word "multi" before the cost to denote that we will try to pay it more than once.
+kicker=multi{b}{b}
+you can access the variable for how many times payment was made by using the variable "kicked"
+
+===Dredge==
+dredge is supported with no extra code accept
+dredge=dredge(NUMBER)
+dredge=dredge(3) will automatically give you the choice to draw or dredge when a draw event occurs, it than handles the depletion on it's own.
+
+===draw replacement effects==
+using the following lines allows you to denote that draw abilities will be replaced by a specified ability.
+auto=replacedraw ABILITY
+or for your opponent
+auto=opponentreplacedraw ABILITY
+
+it is important that the draw replacement be the first thing in the string to parse. it can be used in other abilities such as transforms subkeyword newability[, however it still has to be the first thing parsed, the replacement ability is parsed after the white space.
+
+LIMITATION:if you replace a draw with a draw ability, you need to use a subkeyword of draw:X , draw:2 noreplace. noreplace denotes that the draw was located in an ability that replaces draw effects, it runs the run ability a second time without sending a draw event.
+draw events and drawn card events are separate. 
 ===may===
 
 The _may_ keyword is used to represent the text "When ... comes into play, you may ... ". When this rule is executed, then player will see a menu pop up, which will allow him to choose the rule's effect or cancel. The effect following the "may" keyword will only be executed if the player chose to do so.
