@@ -730,7 +730,14 @@ Note: If you have specified the token in any _cards.dat file as its own card (wi
 
 *protection from([[#auto target|target]])* - gives the card protection from all cards that match the criteria specified in target. Cannot be used in activated abilities or sorceries/instants. Can be used as continuous effect (as a permanent ability of the card, or transferred via aura / lord / etc.)
 
-*cantbeblockedby([[#auto target|target]])* - makes the card unblockable by creatures that match the criteria specified in target. Cannot be used in activated abilities or sorceries/instants. Can be used as continuous effect (as a permanent ability of the card, or transferred via aura / lord / etc.)
+*cantbeblockedby([[#auto target|target]])* - makes the card unblockable by creatures that match the criteria specified in target. Can
+be used in anything if you use the ueot ability wrapper.
+
+*cantbeblockeof([[#auto target|target]])* - makes the target unable to block creatures that match the criteria specified in target. Can
+be used in anything if you use the ueot ability wrapper.
+
+*cantbeblockerof(this)* - makes the source card unblockable by the targeted creatures. Can
+be used in anything if you use the ueot ability wrapper.
 
 *{{{[}}}[[#auto cost|cost]]:]maxCast([[#auto target|target]])n* - sets the Maximum number of spells (defined by target) a player can cast (move to the stack) per turn
 
