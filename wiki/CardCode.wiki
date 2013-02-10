@@ -808,7 +808,16 @@ Note: For a card with Ninjutsu, you basically need 2 things: {N} as cost which m
 *loseSubtypesOf([#type|type])* - Target Card loses its subtypes of a given type. Valid values for the type are currently hardcoded. e.g: _loseSubtypesOf(land)_
 </font>
 
-===Cost Reduction===
+===Cost Reduction/Manapool munipulation===
+
+*mypoolsave([colorless | red | white | black | blue | green])
+is a static ability for perminents that tells the game that while this is in play, the manapool is not to empty the listed color, the parameter
+only allows listing one color at a time. multiple lines might be needed for some cards.
+*opponentpoolsave([colorless | red | white | black | blue | green])
+same as above but for opponent manapool.
+
+add{MANA} doesntempty
+doesntempty tag on mana producers tells the game that until end of turn this mana is not to be emptied from the manapool, it will empty all other untagged mana as normal.
 
 *altercost( [colorless | red | white | black | blue | green] , -x )* - reduces the target card casting cost by x. Cannot be used in activated abilities or sorceries/instants. Can be used as continuous effect (as a permanent ability of the card, or transferred via aura / lord / etc.)
 
