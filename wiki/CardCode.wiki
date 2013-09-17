@@ -349,19 +349,12 @@ Valid keywords for target_type are:
 Adding a "s" to a target means "1 target or more". Otherwise, it is 1 target. Note: This may not work as expected, depending on the effect applied to the targets. (??)
 
 *Examples:*
-{|
-|creature || _(targets one creature)_
-|-
-|goblin,player || _(targets one goblin OR one player)_
-|-
-|wall,land,cat || _(targets one wall or land or cat)_
-|-
-|  *  || _(targets one card of any type)_
-|-
-|elfs || _(targets one or more elves - note that the parser doesn't understand irregular plurals, so "elves" would not work)_
-|-
-|  * s || _(targets one or more carda of any type) (??)_
-|}
+|| creature || _(targets one creature)_ ||
+|| goblin,player || _(targets one goblin OR one player)_ ||
+|| wall,land,cat || _(targets one wall or land or cat)_ ||
+||  *  || _(targets one card of any type)_ ||
+|| elfs || _(targets one or more elves - note that the parser doesn't understand irregular plurals, so "elves" would not work)_ ||
+|| * s || _(targets one or more carda of any type) (??)_  ||
 
 *Limitations:* Although you can use "player" as a target, you cannot specify anything about this player. For example, you cannot specify "opponent" (which would be useful for rules like "Whenever this card deals damage to an opponent ...").
 
@@ -394,22 +387,13 @@ Keywords inside brackets are separated by a semicolon (*;*). Currently, the rela
 Each of the three keywords "power", "toughness", and "manacost", can be followed by one of three comparison operators: _=_ (equal to), _<=_ (less than or equal), _<=_ (greater than or equal); and then by an integer, to which the value will be compared.
 
 *Examples:*
-{|
-|creature[blue] || _(targets one blue creature)_
-|-
-|artifact[-tapped] || _(targets one untapped artifact)_
-|-
-|creature[-black;-artifact] || _(targets one creature that is not black AND is not an artifact)_
-|-
-|creature[elf;warrior] || _(targets one creature that is an elf OR a warrior OR both)_
-|-
-|cleric[toughness<=4] || _(targets one cleric whose toughness is 4 or less)_
-|-
-|aura[manacost>=3] || _(targets one aura which has a converted manacost of 3 or more)_
-|-
-|<font color="#008000">creature[fresh]</font>|| <font color="#008000">_(targets a creature which was a put into the determined zone this turn)_</font>
-|-
-|}
+|| creature[blue] || _(targets one blue creature)_ ||
+|| artifact[-tapped] || _(targets one untapped artifact)_ ||
+|| creature[-black;-artifact] || _(targets one creature that is not black AND is not an artifact)_ ||
+|| creature[elf;warrior] || _(targets one creature that is an elf OR a warrior OR both)_ ||
+|| cleric[toughness<=4] || _(targets one cleric whose toughness is 4 or less)_ ||
+|| aura[manacost>=3] || _(targets one aura which has a converted manacost of 3 or more)_ ||
+|| <font color="#008000">creature[fresh]</font>|| <font color="#008000">_(targets a creature which was a put into the determined zone this turn)_</font> ||
 
 *Limitations:* Target resrictions are currently not available for targets using the keywords _player_, _this_ or _mytgt_. So, unfortunately, it is not yet possible to code cards with rules like "When this card attacks ...", because _aslongas(this[attacking])_ cannot be parsed.
 
@@ -430,21 +414,13 @@ The prefix and the zone name form a single word, e.g. "mybattlefield" (for: anyt
 
 These prefixes are always seen from the perspective of the player who controls the card that uses them in its code. Let's say I'm playing against "Sheila", and I control a creature called "Painter", which lets me target a graveyard and change the color of all cards inside to green. The following table shows which graveyard would be affected by this ability, depending on the prefix used before "graveyard":
 
-{| border="1"
-!Prefix !! Meaning !! "Painter" affects ...
-|-
-|(none) || _(the whole zone)_ || ... all graveyards of all players
-|-
-|my || _(zone/cards controlled by the controller of the targeting card)_ || ... my graveyard, because I'm controlling Painter
-|-
-|opponent || _(zone/cards controlled by the opponent of the targeting card's controller)_ || ... Sheila's graveyard, because she's the opponent of Painter
-|-
-|owner || _(zone/cards controlled by the owner of the targeting card)_ || ... usually my graveyard, assuming that Painter was originally part of my deck. If Painter was originally part of Sheila's deck, and I merely took control of it during play, then Sheila is Painter's owner, and her graveyard would be targeted.
-|-
-|targetcontroller || _(zone/cards controlled by the controller of the targeted card)_ || If target is a player, targetcontroller will be that player. If target is a card, targetcontroller will be that card's controller
-|-
-|targetowner || _(zone/cards controlled by the owner of the targeted card)_ || If target is a player, targetcontroller will be that player. If target is a card, targetcontroller will be that card's owner
-|}
+|| Prefix || Meaning || "Painter" affects ... ||
+|| (none) || _(the whole zone)_ || ... all graveyards of all players ||
+|| my || _(zone/cards controlled by the controller of the targeting card)_ || ... my graveyard, because I'm controlling Painter ||
+|| opponent || _(zone/cards controlled by the opponent of the targeting card's controller)_ || ... Sheila's graveyard, because she's the opponent of Painter ||
+|| owner || _(zone/cards controlled by the owner of the targeting card)_ || ... usually my graveyard, assuming that Painter was originally part of my deck. If Painter was originally part of Sheila's deck, and I merely took control of it during play, then Sheila is Painter's owner, and her graveyard would be targeted. ||
+|| targetcontroller || _(zone/cards controlled by the controller of the targeted card)_ || If target is a player, targetcontroller will be that player. If target is a card, targetcontroller will be that card's controller ||
+|| targetowner || _(zone/cards controlled by the owner of the targeted card)_ || If target is a player, targetcontroller will be that player. If target is a card, targetcontroller will be that card's owner ||
 
 *Limitations:*
   *  Anything that allows a player to look into a library will cause the library to be shuffled after the effect has resolved.
@@ -455,24 +431,14 @@ These prefixes are always seen from the perspective of the player who controls t
 
 ==example targets==
 All this sounds pretty complex, but it's not. Let's see some working examples:
-{|
-|-
-|creature || _(any creature in play)_
-|-
-|artifact,enchantment || _(any artifact or enchantment in play)_
-|-
-|  * {{{|}}}graveyard || _(any card in any graveyard)_
-|-
-|creature,player || _(any creature or player in play)_
-|-
-|mountains || _(one or more mountains in play)_
-|-
-|artifact,enchantment{{{|}}}mygraveyard || _(any artifact or enchantment in your graveyard)_
-|-
-|creature[-black;-artifact] || _(any non black, non artifact creature in play (that's what actually used for Terror)_
-|-
-|  * {{{|}}}stack || _(any spell on the stack)_
-|}
+|| creature || _(any creature in play)_ ||
+|| artifact,enchantment || _(any artifact or enchantment in play)_ ||
+||  * {{{|}}}graveyard || _(any card in any graveyard)_ ||
+|| creature,player || _(any creature or player in play)_ ||
+|| mountains || _(one or more mountains in play)_ ||
+|| artifact,enchantment{{{|}}}mygraveyard || _(any artifact or enchantment in your graveyard)_ ||
+|| creature[-black;-artifact] || _(any non black, non artifact creature in play (that's what actually used for Terror)_ ||
+||  * {{{|}}}stack || _(any spell on the stack)_ ||
 
 If you cannot describe the target with the available keywords, then you're doomed, you cannot add the card to the game without coding.
 
@@ -590,14 +556,9 @@ The keywords "next" and "each" determine whether the effect will trigger only th
 The keywords "my", "opponent", and "targetcontroller"(??) determine whether only phases of the card's controller are counted ("my"), or only phases of the card controller's opponent ("opponent"). If neither of the three is specified, then both players' turns can fire the trigger.
 
 Examples:
-{|
-|-
-|@each my upkeep:life:2 controller || _(gives the card's controller 2 life at each of his upkeep phases)_
-|-
-|@each combatbegins:life:2 controller || _(gives the card's controller 2 life at each of his upkeep phases)_
-|-
-|@next opponent end:draw:2 opponent || _(lets the opponent draw 2 cards at the end of his next turn)_
-|}
+|| @each my upkeep:life:2 controller || _(gives the card's controller 2 life at each of his upkeep phases)_ ||
+|| @each combatbegins:life:2 controller || _(gives the card's controller 2 life at each of his upkeep phases)_ ||
+|| @next opponent end:draw:2 opponent || _(lets the opponent draw 2 cards at the end of his next turn)_ ||
 
 *Limitations:*
 
