@@ -214,7 +214,7 @@ auto=life:1 controller
 
 *Example:* power=5
 
-*Usage:* Some cards have a power of "  * ", or "  * +1". In this case, specify the value that the term would have if the "  * " was a zero - e.g. "power=0" and "power=1" for the two examples above. The functionality of the "  * " can be coded by a later [[#auto|auto]] rule.
+*Usage:* Some cards have a power of "  `*` ", or "  `*` +1". In this case, specify the value that the term would have if the "  `*` " was a zero - e.g. "power=0" and "power=1" for the two examples above. The functionality of the "  `*` " can be coded by a later [[#auto|auto]] rule.
 
 =toughness=
 
@@ -222,7 +222,7 @@ auto=life:1 controller
 
 *Example:* toughness=5
 
-*Usage:* Some cards have a toughness of "  * ", or "  * +1". In this case, specify the value that the term would have if the "  * " was a zero - e.g. "toughness=0" and "toughness=1" for the two examples above. The functionality of the "  * " can be coded by a later [[#auto|auto]] rule.
+*Usage:* Some cards have a toughness of "  ``* ", or "  `*` +1". In this case, specify the value that the term would have if the "  `*` " was a zero - e.g. "toughness=0" and "toughness=1" for the two examples above. The functionality of the "  `*` " can be coded by a later [[#auto|auto]] rule.
 
 =text=
 
@@ -247,7 +247,7 @@ The following abilities are supported:
   *  cantmillose _(controller can't lose by getting milled)_
   *  cantregen _(creature can't regnerate)_
   *  cantwin _(controller cant win the game / opponent cant lose)_
-  *  <font color="#008000">changeling</font>
+  *  changeling
   *  cloud _(can only block creatures with flying)_
   *  controllershroud _(Card example:True Believer)_
   *  deathtouch
@@ -255,12 +255,11 @@ The following abilities are supported:
   *  doesnotuntap _(... during it's controller's untap phase)_
   *  double strike
   *  exalted
-  *  <font color="#008000">exiledeath</font> _<font color="#008000">(will send the card to exile instead of to graveyard opon death. Treated as a replacement effect.)
-</font>_
+  *  exiledeath _(will send the card to exile instead of to graveyard opon death. Treated as a replacement effect.)_
   *  fear
   *  first strike
   *  flash
-  *  <font color="#008000">flanking</font>
+  *  flanking
   *  flying
   *  foresthome / islandhome / mountainhome / plainshome / swamphome
   *  forestwalk / islandwalk / mountainwalk / plainswalk / swampwalk
@@ -288,7 +287,7 @@ The following abilities are supported:
   *  shadow
   *  shroud
   *  storm
-  *  <font color="#008000">sunburst</font>
+  *  sunburst
   *  trample
   *  treason _(card with abilities=treason will be sacrificed at the end of the turn. Card example:Sneak Attack)_
   *  unblockable _(note that there's also "cantbeblockedby(target_type)" available as an auto rule)_
@@ -296,7 +295,6 @@ The following abilities are supported:
   *  vigor _(instead of taking damage the source gains +1/+1 counters. Card examples:Phytohydra)_
   *  wilting _(source takes damage in the form of -1/-1 counters)_
   *  wither
-<font color="#008000">
   *  legendarylandwalk
   *  desertlandwalk
   *  snowforestlandwalk
@@ -310,7 +308,6 @@ The following abilities are supported:
   *  weak _(cant block creatures with more power)_
   *  phasing
   *  split second
-</font>
 
 
 Note that despite being supported, some of the abilities don't work like you would expect them to, due to some limitations in the engine.
@@ -342,7 +339,7 @@ target=target_type_1[s][,target_type_2[s]][|zone1[,zone2]]
 Valid keywords for target_type are:
   *  any word that can be found in the [[#type|type]] or [[#subtype|subtype]] key of any card
   *  player (meaning "a player")
-  *  the   *  symbol (asterisk), meaning "a card of any type"
+  *  the   `*`  symbol (asterisk), meaning "a card of any type"
   *  this (meaning: the one card that has this rule)
   *  mytgt (meaning: the target of the card that has this rule. Mytgt uses a very broad definition of "target". For example, an aura can always use mytgt to reference the permanent it enchants as "mytgt", even though - according to the rules - it isn't technically targeting it anymore.)
 
@@ -352,9 +349,9 @@ Adding a "s" to a target means "1 target or more". Otherwise, it is 1 target. No
 || creature || _(targets one creature)_ ||
 || goblin,player || _(targets one goblin OR one player)_ ||
 || wall,land,cat || _(targets one wall or land or cat)_ ||
-||  *  || _(targets one card of any type)_ ||
+||  `*`  || _(targets one card of any type)_ ||
 || elfs || _(targets one or more elves - note that the parser doesn't understand irregular plurals, so "elves" would not work)_ ||
-|| * s || _(targets one or more carda of any type) (??)_  ||
+|| `*`s || _(targets one or more carda of any type) (??)_  ||
 
 *Limitations:* Although you can use "player" as a target, you cannot specify anything about this player. For example, you cannot specify "opponent" (which would be useful for rules like "Whenever this card deals damage to an opponent ...").
 
@@ -367,7 +364,7 @@ A target can be followed by a string inside brackets (*[]*) to give more specifi
   *  one or more [[#abilities|abilities]], such as _flying_.
   *  _power_, _toughness_, and/or _manacost_
   *  _gear_ - looks if a card is equipped ["this(gear !=0) effect"] or how many artifacts are on a card ["thisforeach(equip) effect"]
-  *  <font color="#008000">_fresh_ - [fresh]|zone donates a card that was placed into the determined zone this turn. [fesh] works for the zones "battlefield and "graveyard".
+  *  _fresh_ - [fresh]|zone donates a card that was placed into the determined zone this turn. [fesh] works for the zones "battlefield and "graveyard".
   *  _multicolor_ denotes multicolored target
   *  _leveler_ -checks if the card is a level up card
   *  _enchanted_ -checks if the card is enchanted
@@ -393,16 +390,16 @@ Each of the three keywords "power", "toughness", and "manacost", can be followed
 || creature[elf;warrior] || _(targets one creature that is an elf OR a warrior OR both)_ ||
 || cleric[toughness<=4] || _(targets one cleric whose toughness is 4 or less)_ ||
 || aura[manacost>=3] || _(targets one aura which has a converted manacost of 3 or more)_ ||
-|| <font color="#008000">creature[fresh]</font>|| <font color="#008000">_(targets a creature which was a put into the determined zone this turn)_</font> ||
+|| creature[fresh] || _(targets a creature which was a put into the determined zone this turn)_ ||
 
 *Limitations:* Target resrictions are currently not available for targets using the keywords _player_, _this_ or _mytgt_. So, unfortunately, it is not yet possible to code cards with rules like "When this card attacks ...", because _aslongas(this[attacking])_ cannot be parsed.
 
 ==target zones==
 You can limit the targeting of your card to specific zones. The following zones are available:
 
-_battlefield, graveyard, library, hand, stack, exile,   * _
+_battlefield, graveyard, library, hand, stack, exile,   `*` _
 
-The asterisk (  * ) means "all zones". You can also use the term "inplay" synonymous for "battlefield", and "removedfromgame" synonymous for "exile".
+The asterisk ( `*` ) means "all zones". You can also use the term "inplay" synonymous for "battlefield", and "removedfromgame" synonymous for "exile".
 
 The default value for zones is "inplay".
 
@@ -433,12 +430,12 @@ These prefixes are always seen from the perspective of the player who controls t
 All this sounds pretty complex, but it's not. Let's see some working examples:
 || creature || _(any creature in play)_ ||
 || artifact,enchantment || _(any artifact or enchantment in play)_ ||
-||  * {{{|}}}graveyard || _(any card in any graveyard)_ ||
+||  `*` {{{|}}}graveyard || _(any card in any graveyard)_ ||
 || creature,player || _(any creature or player in play)_ ||
 || mountains || _(one or more mountains in play)_ ||
 || artifact,enchantment{{{|}}}mygraveyard || _(any artifact or enchantment in your graveyard)_ ||
 || creature[-black;-artifact] || _(any non black, non artifact creature in play (that's what actually used for Terror)_ ||
-||  * {{{|}}}stack || _(any spell on the stack)_ ||
+||  `*` {{{|}}}stack || _(any spell on the stack)_ ||
 
 If you cannot describe the target with the available keywords, then you're doomed, you cannot add the card to the game without coding.
 
@@ -498,10 +495,10 @@ You have to type in one {L} for each single point of life to pay for the autolin
   *  {T}: - _(tap this card)_
   *  {G}{T}: - _(pay one green mana and tap this card)_
   *  {1}{S(goblin|mybattlefield)}: - _(pay 1 mana and sacrifice a goblin you control)_
-  *  {S(  * |myhand)}: - _(choose and discard a card - discarding is technically very similar to "sacrificing from the hand")_ (??)
+  *  {S(  `*` |myhand)}: - _(choose and discard a card - discarding is technically very similar to "sacrificing from the hand")_ (??)
   *  {0}: - _(This ability can be activated without any cost, but it needs to be activated, it does not fire automatically or continuously)_
   *  {L}{L}{L}{B}{S(creature|mybattlefield)}: - _(pay 3 life, 1 black mana and sacrifice a creature you control)_
-  *  {E(  * |mygraveyard)}{T}: - _(exile a card from your graveyard and tap this card)_
+  *  {E(  `*` |mygraveyard)}{T}: - _(exile a card from your graveyard and tap this card)_
   *  {T(elf|mybattlefield)}{T(elf|mybattlefield)}: - _(tap 2 elves you control)_
 As you can see, there are no limitations in combining the different auto costs.
 
@@ -521,26 +518,24 @@ Triggers are declared with the keyword _@_, and end with a colon _:_. The most b
 The following triggers are available in Wagic:
   *  [[#phase-based triggers|(various names)]]: trigger on phase start
   *  [[#@movedto|@movedto]]: trigger on a card having changed zones
-  *  [[#@attacking|@attacking]]:<font color="#008000"> trigger on a card declared as an attacker</font>
-  *  [[#@blocking|@blocking]]:<font color="#008000"> trigger on a card declared as an blocker</font>
-  *  [[#@blocked|@blocked]]:<font color="#008000"> trigger on an attacking card being blocked</font>
-  *  [[#@notblocked|@notblocked]]:<font color="#008000"> trigger on an unblocked attacking card</font>
+  *  [[#@attacking|@attacking]]:trigger on a card declared as an attacker
+  *  [[#@blocking|@blocking]]:trigger on a card declared as an blocker
+  *  [[#@blocked|@blocked]]:trigger on an attacking card being blocked
+  *  [[#@notblocked|@notblocked]]:trigger on an unblocked attacking card
   *  [[#@damaged|@damaged]]: trigger on a card or player being damaged
-  *  [[#@combatdamaged|@combatdamaged]]:<font color="#008000"> trigger on a card or player being combat damaged</font>
-  *  [[#@noncombatdamaged|@noncombatdamaged]]:<font color="#008000"> trigger on a card or player being damaged by a noncombat source.</font>
+  *  [[#@combatdamaged|@combatdamaged]]:trigger on a card or player being combat damaged
+  *  [[#@noncombatdamaged|@noncombatdamaged]]:trigger on a card or player being damaged by a noncombat source.
   *  [[#@tapped|@tapped]]: trigger on a card becoming tapped
-  *  [[#@tappedformana|@tappedformana]]:<font color="#008000"> trigger on a card becoming tapped for mana</font>
-  *  [[#@untapped|@untapped]]:<font color="#008000"> trigger on a card becoming untapped</font>
-  *  [[#@drawn|@drawn]]:<font color="#008000"> trigger related to each card draw</font>
-  *  [[#@vampired|@vampired]]:<font color="#008000"> triggers when a card is put in graveyard this turn that was damaged by source</font>
-  *  [[#@lifed|@lifed]]:<font color="#008000"> trigger related to life gain</font>
-  *  [[#@lifeloss|@lifeloss]]:<font color="#008000"> trigger related to lifeloss</font>
-  *  [[#@targeted|@targeted]]:<font color="#008000"> trigger related to a card being targeted</font>
-  *  [[#@discarded|@discarded]]:<font color="#008000"> trigger related to cards being discarded</font>
-  *  [[#@sacrificed|@sacrificed]]:<font color="#008000"> trigger related to cards being sacrificed</font>
-  *  [[#@attackedalone|@attackedalone]]:<font color="#008000"> trigger related to when a card attacked alone</font>
-
-<font color="#008000"></font>
+  *  [[#@tappedformana|@tappedformana]]:trigger on a card becoming tapped for mana
+  *  [[#@untapped|@untapped]]:trigger on a card becoming untapped
+  *  [[#@drawn|@drawn]]:trigger related to each card draw
+  *  [[#@vampired|@vampired]]:triggers when a card is put in graveyard this turn that was damaged by source
+  *  [[#@lifed|@lifed]]:trigger related to life gain
+  *  [[#@lifeloss|@lifeloss]]:trigger related to lifeloss
+  *  [[#@targeted|@targeted]]:trigger related to a card being targeted
+  *  [[#@discarded|@discarded]]:trigger related to cards being discarded
+  *  [[#@sacrificed|@sacrificed]]:trigger related to cards being sacrificed
+  *  [[#@attackedalone|@attackedalone]]:trigger related to when a card attacked alone
 
 *Limitation:*
   *  It is currently not possible to pay a [[#auto cost|cost]] during a triggered effect.
@@ -636,7 +631,7 @@ The _may_ keyword is used to represent the text "When ... comes into play, you m
 *Example:*
   *  auto=may life:2 - _(When this comes into play, you may gain 2 life.)_
   *  auto=may bury target(creature) - _(When this comes into play, you may bury target creature.)_
-  *  auto=@movedTo(  * [white]|stack): may life:1 controller - _(Whenever a white spell is cast, you may gain 1 life.)_
+  *  auto=@movedTo(  `*` [white]|stack): may life:1 controller - _(Whenever a white spell is cast, you may gain 1 life.)_
 
 *Limitations:*
   *  "May" was designed for "comes into play" effects. It also works for triggers like the one in the last example. It may not work in other circumstances (e.g. in activated abilities), so thorough testing is advised for these cases.
